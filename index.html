@@ -1,1 +1,185 @@
-<h1>欢迎来到我的主页</h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术日志 | limbo的主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* 内容容器 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        /* 主内容区 */
+        .main-content {
+            flex: 3;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 文章列表 */
+        .article-card {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .article-card h2 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-excerpt {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* 侧边栏 */
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .author-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .author-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/">首页</a>
+            <a href="/about">关于</a>
+            <a href="/archive">归档</a>
+            <a href="/contact">联系</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="article-card">
+                <h2>我的第一个强化学习项目实践</h2>
+                <div class="article-meta">
+                    <span>2023年10月15日</span> • 
+                    <span>技术 • 机器学习</span>
+                </div>
+                <p class="article-excerpt">在这篇文章中，我将分享如何从零开始构建一个基于Python的房价预测模型。内容包括数据清洗、特征工程、模型选择以及部署到生产环境的全过程...</p>
+                <a href="#">阅读更多 →</a>
+            </div>
+
+            <div class="article-card">
+                <h2>前端性能优化实践指南</h2>
+                <div class="article-meta">
+                    <span>2023年10月10日</span> • 
+                    <span>前端 • 性能优化</span>
+                </div>
+                <p class="article-excerpt">现代Web应用的性能优化策略分享，涵盖资源加载优化、渲染性能提升、缓存策略等多个方面，帮助你的应用获得更好的用户体验...</p>
+                <a href="#">阅读更多 →</a>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="author-info">
+                <img src="avatar.jpg" alt="作者头像" class="author-img">
+                <h3>limbo的技术日志</h3>
+                <p>全栈开发者 | 强化学习爱好者</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>分类目录</h4>
+                <ul>
+                    <li><a href="#">技术杂谈</a></li>
+                    <li><a href="#">强化学习</a></li>
+                    <li><a href="#">前端开发</a></li>
+                    <li><a href="#">生活随笔</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h4>社交链接</h4>
+                <p>
+                    <a href="#">GitHub</a> | 
+                    <a href="#">知乎</a> | 
+                    <a href="#">Twitter</a>
+                </p>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
